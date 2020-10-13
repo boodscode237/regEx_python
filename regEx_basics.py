@@ -1,3 +1,8 @@
+import re
+
+# Finding a phone number using function
+
+
 def isPhoneNumber(text):
     if len(text) != 12:
         return False  # not phone number-sized
@@ -27,3 +32,12 @@ for i in range(len(message)):
     if isPhoneNumber(chunk):
         print('Phone number found: ' + chunk)
 print('Done')
+
+# Finding a phone number using REGEX
+
+phoneNumberRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phoneNumberRegex.search(message)  # search gives us the first match
+mo2 = phoneNumberRegex.findall(message)  # findall gives us all the matches
+res1 = mo.group()
+
+print(mo2)
