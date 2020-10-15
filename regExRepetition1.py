@@ -17,7 +17,7 @@ batRegex = re.compile(r'Bat(wo)*man')
 mo1 = batRegex.search('The Adventures of Batman')
 print(mo1.group())
 
-mo2 = batRegex.search('The Adventures of Batwoman')
+mo2 = batRegex.search('The Adventures of Batwoan')
 print(mo2.group())
 
 mo3 = batRegex.search('The Adventures of Batwowowowoman')
